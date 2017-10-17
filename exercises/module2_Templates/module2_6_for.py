@@ -6,11 +6,11 @@ from flask import Flask, render_template
 
 app = Flask(__name__)
 
+
 @app.route("/")
 def index():
-	title = "Learning Flask"
-	paragraph = "Flask is awesome"
-	return render_template("index5.html",title=title, paragraph=paragraph)
+	person = ["Ally", "Alfred"]
+	return render_template("index5.html", person=person)
 
 if __name__ == "__main__":
-  app.run()
+    app.run(debug=True)

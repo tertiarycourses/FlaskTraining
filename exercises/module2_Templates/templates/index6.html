@@ -2,7 +2,8 @@
 
 {% block content %}
 <ul>
-{% for i in content["Fruits"] %}
-	<li>{{i}}</li>
-{% endfor %}
+   {% for name,fruit in person.items() %}
+	   <li>{{name}} love to eat {{fruit}}</li>
+   {% endfor %}
+</ul>
 {% endblock %}
