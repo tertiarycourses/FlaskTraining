@@ -2,8 +2,10 @@
 # Module 3: HTTP Request
 # POST method
 
-from flask import Flask, redirect, url_for, request
+from flask import Flask, redirect, url_for, request, render_template
+
 app = Flask(__name__)
+
 
 @app.route('/login',methods = ['GET','POST'])
 def login():
@@ -13,4 +15,4 @@ def login():
         return render_template('success.html',user = user,score= score)
 
 if __name__ == '__main__':
-   app.run()
+   app.run(port=5005)

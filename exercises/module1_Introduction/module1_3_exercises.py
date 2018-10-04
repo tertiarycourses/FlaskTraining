@@ -5,9 +5,13 @@ app = Flask(__name__)
 def index():
     return "Hello World!"
 
-@app.route('/about')
-def about():
+@app.route('/aboutus')
+def blog():
     return 'About Us'
+
+@app.route('/blog/post/<int:id>')
+def post(id):
+    return 'Blog Post {}'.format(id)
 
 if __name__ == "__main__":
     app.run()

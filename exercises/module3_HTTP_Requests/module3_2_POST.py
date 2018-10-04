@@ -7,7 +7,7 @@ app = Flask(__name__)
 
 @app.route('/success/<name>')
 def success(name):
-   return 'welcome %s' % name
+   return 'welcome {}'.format(name)
 
 @app.route('/login',methods = ['GET','POST'])
 def login():
@@ -16,4 +16,4 @@ def login():
 		return redirect(url_for('success',name = user))
 
 if __name__ == '__main__':
-   app.run()
+   app.run(port=5005)

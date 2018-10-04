@@ -48,4 +48,4 @@ def list():
    return render_template("list.html",rows = rows)
 
 if __name__ == '__main__':
-   app.run()
+   app.run(port=5005)
