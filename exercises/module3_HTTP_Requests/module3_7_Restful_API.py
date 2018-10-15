@@ -1,17 +1,32 @@
 # Python Flask Essential Training
 # Module 3: Request
-# Redirect URL
+# RestFul API
 
-from flask import Flask, flash, render_template
+from flask import Flask, jsonify
+
 app = Flask(__name__)
-app.secret_key = 'some_secret'
 
-@app.route('/')
-def index():
-   flash('Hello this is a flash')
-   return render_template('index3.html')
+tasks = [
+    {
+        'id': 1,
+        'title': u'Buy groceries',
+        'description': u'Milk, Cheese, Pizza, Fruit, Tylenol', 
+        'done': False
+    },
+    {
+        'id': 2,
+        'title': u'Learn Python',
+        'description': u'Need to find a good Python tutorial on the web', 
+        'done': False
+    }
+]
+
+@app.route('/todo/api/v1.0/tasks', methods=['GET'])
+def get_tasks():
+    return jsonify({'tasks': tasks})
 
 if __name__ == '__main__':
-   app.run()
+    app.run(port=5006)
 
-
+# Run the curl from the new terminal
+# curl -i http://localhost:5006/todo/api/v1.0/tasks
