@@ -1,5 +1,5 @@
 # Python Flask Web Development Essential Training
-## by [Tertiary Infotech Pte. Ltd](https://www.tertiarycourses.com.sg/)
+## by [Tertiary Courses](https://www.tertiarycourses.com.sg/)
 
 These are the exercise files used for [https://www.tertiarycourses.com.sg/python-flask-web-development-training.html](https://www.tertiarycourses.com.sg/python-flask-web-development-training.html) course. 
 
